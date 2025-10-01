@@ -1,0 +1,39 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>nz.ac.vuw.swen301.tuts.service.server</groupId>
+    <artifactId>service-server</artifactId>
+    <packaging>war</packaging>
+    <version>1.0.0</version>
+    <name>ServiceServer</name>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+        <groupId>jakarta.servlet</groupId>
+        <artifactId>jakarta.servlet-api</artifactId>
+        <version>6.1.0</version>
+        <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>11.0.24</version>
+                <configuration>
+                <scanIntervalSeconds>10</scanIntervalSeconds>
+                <!-- <webApp>
+                    <contextPath>/webapp</contextPath>
+                </webApp> -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
